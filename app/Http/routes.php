@@ -30,7 +30,6 @@ Route::get('/create', function() {
     $article->save();
 
     return 'article created';
-
 });
 
 get('{locale}', function($locale) {
