@@ -22,7 +22,7 @@ Route::get('/create', function() {
     $article->online = true;
     $article->save();
 
-    foreach (['en', 'fr', 'es'] as $locale) {
+    foreach (['en', 'nl', 'fr', 'de'] as $locale) {
 	    $article->translateOrNew($locale)->name = "Title {$locale}";
 	    $article->translateOrNew($locale)->text = "Text {$locale}";
     }
