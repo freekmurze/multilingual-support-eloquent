@@ -2,18 +2,14 @@
 
 use App\Article;
 use App\ArticleTranslation;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class MultilingualTest extends TestCase
 {
     use DatabaseMigrations;
 
     /**
-     * A basic functional test example.
-     *
-     * @return void
+     * Test the localized model.
      */
     public function testLocales()
     {
@@ -30,6 +26,5 @@ class MultilingualTest extends TestCase
                 ->see("Title {$locale}")
                 ->see("Text {$locale}");
         }
-
     }
 }
