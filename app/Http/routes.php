@@ -32,7 +32,7 @@ Route::get('/create', function() {
     return 'article created';
 });
 
-get('{locale}', function($locale) {
+get('{locale}/article', function($locale) {
     app()->setLocale($locale);
 
     $article = Article::first();
